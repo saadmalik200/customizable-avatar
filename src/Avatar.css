@@ -1,0 +1,29 @@
+.avatar-s {
+  width: 30px;
+  height: 30px;
+}
+.avatar-m {
+  width: 60px;
+  height: 60px;
+}
+.avatar-l {
+  width: 120px;
+  height: 120px;
+}
+
+.avatar-xl {
+  width: 200px;
+  height: 200px;
+}
+
+.avatar-circle {
+  border-radius: 50%;
+}
+
+.avatar-rounded {
+  border-radius: 8px;
+}
+
+.avatar-square {
+  border-radius: 0;
+}

@@ -9,32 +9,75 @@ function App() {
     { size: "l", width: "120", height: "120" },
     { size: "xl", width: "200", height: "200" },
   ];
-  const type = ["square", "rounded", "circle"];
+  const types = ["square", "rounded", "circle"];
 
-  return sizes.map((size, i) => (
-    <div className="card-collection">
-      {/* Small size */}
-      <div className="card">
-        <div className="card-content">
-          <Avatar
-            src="https://picsum.photos/400/400"
-            size={size.size}
-            type="circle"
-          />
-          <p>
-            size <strong>{size.size}</strong> with {size.width}x{size.height}
-          </p>
-          <p>
-            type <strong>square</strong>
-          </p>
-        </div>
+  return (
+    <div>
+      <div className="flex gap-3">
+        {types.map((type, i) => (
+          <div className="card-collection ">
+            {/* Small size */}
+            <div className="card ">
+              <div className="card-content w-[20rem]">
+                {sizes.map((size, i) => {
+                  return (
+                    <>
+                      <Avatar
+                        src="https://picsum.photos/400/400"
+                        size={size.size}
+                        type={type}
+                      />
+                      <p>
+                        size <strong>{size.size}</strong> with {size.width}x
+                        {size.height}
+                      </p>
+                      <p>
+                        type <strong>{type}</strong>
+                      </p>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-  ));
-
-  // <div className="App">
-  //   <Avatar src="https://picsum.photos/400/400" size="xl" type="circle" />
-  // </div>
+  );
 }
 
 export default App;
+
+// return (
+//   <div>
+//     <div>
+//       {sizes.map((size, i) => (
+//         <div className="card-collection">
+//           {/* Small size */}
+//           <div className="card">
+//             <div className="card-content">
+//               {types.map((type, i) => {
+//                 return (
+//                   <>
+//                     <Avatar
+//                       src="https://picsum.photos/400/400"
+//                       size={size.size}
+//                       type={type}
+//                     />
+//                     <p>
+//                       size <strong>{size.size}</strong> with {size.width}x
+//                       {size.height}
+//                     </p>
+//                     <p>
+//                       type <strong>{type}</strong>
+//                     </p>
+//                   </>
+//                 );
+//               })}
+//             </div>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// );

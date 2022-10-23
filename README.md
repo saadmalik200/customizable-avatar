@@ -1,23 +1,27 @@
 # Customizable avatar component
 
+## Link
+
+- Live Site URL: [https://saadmalik200.github.io/customizable-avatar/](https://saadmalik200.github.io/customizable-avatar/)
+
 You are tasked with creating an Avatar component to use in a React application. The component will essentially display an image.
 But it also needs to be customizable with multiple variations.
 
-It can have 4 different sizes: 
+It can have 4 different sizes:
 
-* s - 30 x 30
-* m - 60 x 60
-* l - 120 x 120
-* xl - 200 x 200
+- s - 30 x 30
+- m - 60 x 60
+- l - 120 x 120
+- xl - 200 x 200
 
 In addition, it can have 3 different styles:
 
-* square
-* rounded (with border-radius of 8px)
-* circle
+- square
+- rounded (with border-radius of 8px)
+- circle
 
 Size `m` and type `square` are the ones used by default.
-It should be possible to use my component like this: 
+It should be possible to use my component like this:
 
 ```
     <Avatar src="https://picsum.photos/400/400" />
